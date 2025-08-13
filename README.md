@@ -1,4 +1,4 @@
-# 🇻🇳 Chatbot Hỏi-Đáp Tài liệu Tiếng Việt (Miễn phí)
+# 🇻🇳 Chatbot Hỏi-Đáp Tài liệu Tiếng Việt
 
 Một chatbot AI tạo sinh (Generative AI) được xây dựng bằng kiến trúc RAG (Retrieval-Augmented Generation), cho phép người dùng "trò chuyện" và hỏi đáp về nội dung của bất kỳ tài liệu PDF tiếng Việt nào được tải lên. Dự án được xây dựng hoàn toàn bằng các công cụ và dịch vụ miễn phí.
 
@@ -39,18 +39,6 @@ Dự án tuân theo kiến trúc **Retrieval-Augmented Generation (RAG)**:
 3.  **Lưu trữ (Store):** Các vector này được lưu vào cơ sở dữ liệu vector FAISS.
 4.  **Truy xuất (Retrieve):** Khi người dùng đặt câu hỏi, câu hỏi cũng được mã hóa thành vector và FAISS sẽ tìm ra các chunk văn bản có nội dung liên quan nhất.
 5.  **Tạo sinh (Generate):** Các chunk liên quan cùng với câu hỏi của người dùng được gửi đến model Gemini để tạo ra câu trả lời cuối cùng.
-
-```mermaid
-flowchart LR
-    A[Tải lên file PDF] --> B[1. Phân đoạn văn bản];
-    B --> C[2. Mã hóa thành Vector <br> (Hugging Face)];
-    C --> D[3. Lưu vào FAISS Vector Store];
-    E[Người dùng đặt câu hỏi] --> F[4. Mã hóa câu hỏi];
-    F --> G{5. Truy xuất các đoạn <br> văn bản liên quan};
-    D --> G;
-    G --> H[6. Tạo câu trả lời <br> (Google Gemini)];
-    H --> I[Hiển thị cho người dùng];
-```
 
 ---
 ## ▶️ Cài đặt và Chạy dự án
