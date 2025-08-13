@@ -1,0 +1,23 @@
+# Bỏ qua môi trường ảo
+.venv/
+venv/
+
+# Bỏ qua file chứa thông tin bí mật (API keys)
+.env
+
+# Bỏ qua các thư mục cache của Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Bỏ qua các file do trình soạn thảo mã tạo ra (VS Code)
+.vscode/
+
+# Bỏ qua các file tạm của hệ điều hành
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+# macOS
+.DS_Store
